@@ -24,7 +24,7 @@ class LoginPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Center(
-                    child: Container(
+                    child: SizedBox(
                       height: 60,
                       width: 178,
                       child: Image.asset('assets/images/tharad_logo.png'),

@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:tharad/core/comeponents/app_input.dart';
 import 'package:tharad/view/home/auth/login_page.dart';
+import 'package:tharad/view/home/auth/otp.dart';
+import 'package:tharad/view/home/auth/profile.dart';
 
 class CreateAccount extends StatefulWidget {
   const CreateAccount({super.key});
@@ -30,7 +32,7 @@ class _CreateAccountState extends State<CreateAccount> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Center(
-                    child: Container(
+                    child: SizedBox(
                       height: 60,
                       width: 178,
                       child: Image.asset('assets/images/tharad_logo.png'),
@@ -64,7 +66,7 @@ class _CreateAccountState extends State<CreateAccount> {
                     dashPattern: [6, 3],
                     borderType: BorderType.RRect,
                     radius: Radius.circular(12),
-                    child: Container(
+                    child: SizedBox(
                       height: 90,
                       width: 375,
                       child: Column(
@@ -155,7 +157,14 @@ class _CreateAccountState extends State<CreateAccount> {
                       ),
                     ),
                     child: TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const Profile(),
+                          ),
+                        );
+                      },
                       child: Text(
                         'انشاء حساب جديد',
                         style: TextStyle(
@@ -184,7 +193,7 @@ class _CreateAccountState extends State<CreateAccount> {
                             context,
                             MaterialPageRoute(
                               builder: (context) => const LoginPage(),
-                            ), 
+                            ),
                           );
                         },
                         child: Text(

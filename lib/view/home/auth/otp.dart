@@ -62,7 +62,7 @@ class _OtpState extends State<Otp> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Center(
-                    child: Container(
+                    child: SizedBox(
                       height: 60,
                       width: 178,
                       child: Image.asset('assets/images/tharad_logo.png'),
@@ -180,11 +180,9 @@ class _OtpState extends State<Otp> {
                     ),
                     child: TextButton(
                       onPressed: () {
-                        Navigator.pushReplacement(
+                        Navigator.push(
                           context,
-                          MaterialPageRoute(
-                            builder: (context) => Profile(),
-                          ),
+                          MaterialPageRoute(builder: (context) => Profile()),
                         );
                       },
                       child: Text(
